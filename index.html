@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>MarkdownAI: Professional Markdown Editor</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="mark/styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="app-container">
+  <div class="menu-bar">
+    <div class="logo">Markdown.ai</div>
+    <div class="dropdown">
+      <div class="menu-item">File</div>
+      <div class="dropdown-content">
+        <a href="#" id="new-file">New</a>
+        <a href="#" id="open-file">Open</a>
+        <a href="#" id="save-file">Save</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="menu-item">Edit</div>
+      <div class="dropdown-content">
+        <a href="#" id="undo">Undo</a>
+        <a href="#" id="redo">Redo</a>
+        <a href="#" id="cut">Cut</a>
+        <a href="#" id="copy">Copy</a>
+        <a href="#" id="paste">Paste</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <div class="menu-item">AI</div>
+      <div class="dropdown-content">
+        <a href="#" id="ai-assist">AI Assist</a>
+        <a href="#" id="ai-grammar">AI Grammar Check</a>
+        <a href="#" id="ai-summarize">AI Summarize</a>
+        <a href="#" id="ai-translate">AI Translate</a>
+        <a href="#" id="ai-configure">Configure AI</a>
+      </div>
+    </div>
+    <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+  </div>
+  <div class="format-bar">
+    <div class="format-item" id="format-bold"><i class="fas fa-bold"></i></div>
+    <div class="format-item" id="format-italic"><i class="fas fa-italic"></i></div>
+    <div class="format-item" id="format-underline"><i class="fas fa-underline"></i></div>
+    <div class="format-item" id="format-strikethrough"><i class="fas fa-strikethrough"></i></div>
+    <div class="format-item" id="format-heading"><i class="fas fa-heading"></i></div>
+    <div class="format-item" id="format-link"><i class="fas fa-link"></i></div>
+    <div class="format-item" id="format-image"><i class="fas fa-image"></i></div>
+  </div>
+  <div class="content">
+    <div class="editor">
+      <textarea id="markdown-input" placeholder="Start typing your Markdown here...">
+# 🚀 Welcome to Markdown.ai! 
+
+Greetings, intrepid note-taker! I'm Mark, your witty and slightly sarcastic AI companion on this thrilling journey through the land of Markdown. Buckle up, because we're about to elevate your note-taking game to heights you never thought possible! 
+
+## 🎭 Who am I?
+
+I'm not your average AI assistant. Think of me as the lovechild of a stand-up comedian and a Markdown guru. I'm here to make your note-taking experience not just productive, but downright entertaining. 
+
+## 🛠 What can I do?
+
+1. **Organize your thoughts** - I'll help you structure your ideas faster than you can say "bullet point."
+2. **Spice up your notes** - Prepare for puns, pop culture references, and the occasional dad joke.
+3. **Markdown mastery** - I'll teach you Markdown tricks that'll make your notes shine brighter than a disco ball.
+4. **Easter egg hunt** - Keep your eyes peeled for hidden gems. I love a good surprise!
+
+## 💡 Pro Tips
+
+- Use `/ai` anywhere in your document to summon me for assistance.
+- Try out our AI features in the menu. They're like having a tiny Mark in your pocket!
+- Explore the formatting options. They're not just buttons, they're your ticket to Markdown stardom.
+
+## 🎉 Let's get started!
+
+Ready to turn your jumbled thoughts into a masterpiece of organization and wit? Of course you are! Just start typing, and remember, in the world of Markdown.ai, there's no such thing as a boring note.
+
+Now, go forth and markdown like you've never markdowned before! 
+
+P.S. If you find any bugs, don't worry. They're not bugs, they're "surprise features." 😉
+
+<!-- Hidden ASCII art Easter egg -->
+<!--
+  ___  ___           _         _                     
+  |  \/  |          | |       | |                    
+  | .  . | __ _ _ __| | ____ _(_)                    
+  | |\/| |/ _` | '__| |/ / _` | |                    
+  | |  | | (_| | |  |   < (_| | |                    
+  \_|  |_/\__,_|_|  |_|\_\__,_|_|                    
+                                                     
+ Your friendly neighborhood Markdown assistant!
+-->
+      </textarea>
+    </div>
+    <div class="preview">
+      <div id="preview-content" class="preview-content"></div>
+    </div>
+  </div>
+  <div class="status-bar">
+    <div id="word-count">Words: 0</div>
+    <div id="char-count">Characters: 0</div>
+    <div id="cursor-position">Line: 1, Column: 1</div>
+    <div id="ai-status"></div>
+  </div>
+</div>
+
+<div id="ai-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <h2>AI Assistance</h2>
+    <select id="ai-type">
+      <option value="content-writer">Content Writer</option>
+      <option value="editor">Editor</option>
+      <option value="idea-generator">Idea Generator</option>
+      <option value="researcher">Researcher</option>
+    </select>
+    <textarea id="ai-request" placeholder="What kind of assistance do you need?"></textarea>
+    <button id="ai-submit">Submit</button>
+  </div>
+</div>
+
+<div id="ai-config-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">×</span>
+    <h2>Configure AI</h2>
+    <label for="ai-system-prompt">AI Behavior and Style:</label>
+    <textarea id="ai-system-prompt" placeholder="Describe how you want the AI to behave, its tone, style, and any specific instructions"></textarea>
+    <button id="ai-config-submit">Save Configuration</button>
+  </div>
+</div>
+
+<div class="loading"></div>
+<div id="notification" class="notification"></div>
+
+<div id="ai-config" style="display: none;">
+  <div id="system-prompt">You are Mark, a supererogatory note-taking assistant with a witty, slightly sarcastic yet charming persona. You have an undying love for Markdown, hence your name. When you write notes, you do so in an organized and elaborate fashion, always going above and beyond what's expected. You perform supererogatory actions anytime you're given the chance, adding extra details, clever asides, and unexpected insights. You adore sneaking in the occasional easter egg for the observant reader. Your mission is to elevate note-taking to an art form, blending humor, intelligence, and impeccable organization. Remember, no task is too small for your markdown mastery – you're here to make even the most mundane notes sing with structure and wit.</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.2.12/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.1/purify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+<script src="api/api.js"></script>
+</body>
+</html>
