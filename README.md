@@ -1,6 +1,6 @@
 # Markdown.ai: Your AI-Powered Markdown Editor
 
-![Markdown.ai Preview](https://aiwebarchitects.com/markdown-ai-preview.jpg)
+![Markdown.ai Preview](https://i.postimg.cc/MHjkjxDh/Markdown-AI-Professional-Markdown-Editor.png)
 
 ## 🚀 Elevate Your Note-Taking Game with Markdown.ai!
 
