@@ -31,12 +31,6 @@ Mark is not your average AI. Think of it as the lovechild of a stand-up comedian
 2. Open `index.html` in your browser
 3. Start typing and let Mark guide you to note-taking nirvana!
 
-### 🎨 Want More Amazing Designs?
-
-Love what you see? Check out our shop for more stunning website and app designs:
-
-[AI Web Architects Shop](https://aiwebarchitects.com/)
-
 ### 📣 Stay Connected
 
 Follow us on X for the latest updates:
