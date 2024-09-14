@@ -2,6 +2,8 @@
 
 ![Markdown.ai Preview](https://i.postimg.cc/MHjkjxDh/Markdown-AI-Professional-Markdown-Editor.png)
 
+Check out our [live demo](https://markdown-converter.on-fleek.app) to see the MarkDown Converter in action!
+
 ## 🚀 Elevate Your Note-Taking Game with Markdown.ai!
 
 Welcome to Markdown.ai, the witty and slightly sarcastic AI companion that's about to revolutionize your note-taking experience! Say goodbye to boring notes and hello to a world of organized, elaborate, and downright entertaining documentation.
@@ -10,7 +12,7 @@ Welcome to Markdown.ai, the witty and slightly sarcastic AI companion that's abo
 
 Mark is not your average AI. Think of it as the lovechild of a stand-up comedian and a Markdown guru. It's here to make your note-taking not just productive, but downright entertaining.
 
-### 🌟 Key Features
+### 🌟 Key Features if AI is Enabled
 
 - **AI-Powered Assistance**: Summon Mark with a simple `/ai` command
 - **Smart Formatting**: Elevate your notes with intelligent Markdown structuring
