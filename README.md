@@ -2,10 +2,6 @@
 
 ![Markdown.ai Preview](https://i.postimg.cc/MHjkjxDh/Markdown-AI-Professional-Markdown-Editor.png)
 
-## 🎬 Demo
-
-Check out our [live demo](https://whispering-evening-melodic.on-fleek.app/) to see the MarkDown Converter in action!
-
 ## 🚀 Elevate Your Note-Taking Game with Markdown.ai!
 
 Welcome to Markdown.ai, the witty and slightly sarcastic AI companion that's about to revolutionize your note-taking experience! Say goodbye to boring notes and hello to a world of organized, elaborate, and downright entertaining documentation.
